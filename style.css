@@ -1,0 +1,119 @@
+/* ------ CSS3 - Morphing Clip-Path Animation ------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fdfdfd;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23b0b0b0' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+    background-color: #ceb8f7;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.48'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+    background-color: #d8bdff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+    background-color: #e7d6ff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+    filter: drop-shadow(-1px 6px 3px rgba(133, 133, 133, 0.5));
+}
+h1 {
+    font-family: 'Londrina Solid', cursive; /* font-family: 'Bungee Shade', cursive; | font-family: 'Ribeye Marrow', cursive; | font-family: 'Londrina Outline', cursive; | font-family: 'Londrina Shadow', cursive; | font-family: 'Londrina Sketch', cursive;  | font-family: 'Cabin Sketch', cursive;  */
+    color: rgb(189, 8, 29);
+    filter: drop-shadow(-1px 6px 3px rgba(133, 133, 133, 0.5));
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 70px;
+}
+.container {
+    width: 800px;
+    position: relative;
+    margin: 90px auto;
+}
+.head {
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    background-color: #e7d6ff; /* #e7d6ff | #d8bdff  */
+    padding: 5px;
+    position: absolute;
+    left: 593px;
+    bottom: 350px;
+    z-index: 2;
+    transition: .6s;
+}
+.face {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: rgb(29, 160, 242);
+    position: relative;
+    z-index: 3;
+}
+.button {
+    width: 220px;
+    height: 100px;
+    background-color: rgb(219, 68, 55); /* rgb(219, 68, 55)  */
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 50, 0.5));
+    transition: .5s;
+    font-size: 35px;
+    color: white;
+    text-align: left;
+    margin: 10px;
+    line-height: 100px;
+    padding-left: 20px;
+    font-family: 'Londrina Solid', cursive;
+    clip-path: polygon(0 0, 60% 0, 100% 0, 100% 50%, 100% 100%, 59% 100%, 0 100%);
+}
+.button:hover {
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+.block {
+    position: absolute;
+    top: 0px;
+    left: 180px;
+    width: 700px;
+    height: 500px;
+    transition: .6s;
+    background-color: rgb(29, 160, 242);
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 50, 0.5));
+    clip-path: polygon(522px 405px,508px 317px,506px 301px,501px 249px,500px 216px,502px 161px,507px 112px,521px 112px,548px 115px,574px 116px,577px 64px,578px 24px,560px 24px,559px 0px,548px 0px,548px 25px,548px 43px,548px 63px,548px 79px,521px 75px,502px 73px,468px 72px,488px 64px,498px 51px,500px 30px,490px 11px,475px 1px,445px 1px,427px 12px,419px 29px,422px 50px,431px 62px,446px 71px,417px 70px,396px 70px,345px 122px,327px 144px,359px 178px,384px 204px,410px 226px,415px 214px,398px 195px,399px 179px,378px 157px,368px 147px,376px 137px,394px 117px,402px 110px,400px 161px,397px 212px,394px 247px,393px 302px,392px 318px,390px 406px,406px 417px,428px 416px,440px 406px,442px 319px,442px 305px,444px 245px,445px 235px,450px 235px,452px 244px,460px 305px,462px 318px,472px 405px,486px 418px,508px 418px);
+    z-index: 1;
+}
+.button:nth-child(1):hover ~ .block {
+
+    clip-path: polygon(522px 407px,541px 325px,542px 306px,506px 242px,510px 223px,524px 155px,531px 129px,555px 135px,593px 144px,606px 137px,591px 93px,581px 70px,571px 46px,548px 25px,542px 32px,559px 53px,547px 67px,558px 84px,566px 104px,536px 94px,517px 88px,500px 81px,512px 73px,522px 61px,527px 46px,524px 30px,514px 17px,499px 11px,484px 11px,464px 21px,455px 42px,458px 60px,470px 77px,446px 74px,430px 70px,380px 58px,357px 52px,320px 42px,302px 35px,287px 28px,269px 19px,241px 5px,237px 14px,278px 57px,355px 89px,380px 97px,413px 109px,426px 113px,414px 162px,398px 214px,384px 243px,341px 303px,330px 318px,280px 385px,287px 409px,301px 418px,320px 413px,385px 331px,395px 317px,431px 272px,437px 263px,454px 265px,464px 277px,494px 312px,494px 324px,478px 397px,487px 415px,508px 418px);
+}
+.button:nth-child(2):hover ~ .block {
+
+    clip-path: polygon(546px 407px,543px 326px,542px 306px,498px 232px,499px 216px,522px 148px,536px 122px,568px 102px,620px 77px,604px 50px,583px 27px,569px 14px,545px 7px,518px -1px,517px 7px,537px 15px,535px 29px,555px 34px,573px 62px,542px 71px,521px 73px,499px 78px,510px 79px,522px 70px,527px 54px,525px 38px,517px 25px,504px 18px,480px 19px,463px 32px,457px 54px,463px 71px,471px 75px,454px 71px,436px 70px,365px 81px,336px 73px,315px 66px,303px 54px,277px 60px,243px 69px,248px 77px,276px 71px,284px 89px,308px 86px,363px 118px,398px 114px,414px 114px,401px 160px,384px 215px,377px 242px,387px 314px,383px 323px,341px 395px,348px 411px,365px 418px,387px 411px,442px 329px,443px 315px,437px 268px,436px 253px,447px 255px,462px 271px,494px 312px,496px 324px,500px 402px,514px 418px,532px 418px);
+}
+.button:nth-child(3):hover ~ .block {
+
+    clip-path: polygon(502px 404px,499px 326px,497px 305px,491px 233px,491px 209px,492px 157px,496px 121px,521px 129px,561px 142px,579px 123px,561px 89px,545px 59px,526px 41px,498px 31px,494px 39px,519px 53px,517px 70px,535px 86px,540px 101px,517px 83px,499px 72px,467px 69px,478px 58px,487px 43px,487px 24px,478px 10px,460px 2px,442px 2px,425px 7px,414px 19px,411px 38px,415px 53px,423px 67px,407px 67px,389px 69px,359px 81px,348px 87px,354px 73px,373px 63px,370px 48px,389px 41px,388px 30px,358px 39px,340px 53px,303px 103px,320px 129px,360px 119px,384px 115px,379px 161px,375px 213px,374px 238px,374px 305px,374px 321px,376px 397px,392px 418px,417px 418px,432px 404px,431px 326px,431px 308px,431px 258px,431px 237px,439px 237px,440px 258px,443px 308px,444px 327px,450px 405px,465px 419px,487px 419px);
+}
+.button:nth-child(4):hover ~ .block {
+
+    clip-path: polygon(546px 407px,543px 326px,542px 306px,498px 232px,499px 216px,522px 148px,536px 122px,568px 102px,620px 77px,604px 50px,583px 27px,569px 14px,545px 7px,518px -1px,517px 7px,537px 15px,535px 29px,555px 34px,573px 62px,542px 71px,521px 73px,499px 78px,510px 79px,522px 70px,527px 54px,525px 38px,517px 25px,504px 18px,480px 19px,463px 32px,457px 54px,463px 71px,471px 75px,454px 71px,436px 70px,357px 80px,336px 73px,315px 66px,313px 52px,282px 40px,259px 31px,258px 40px,282px 51px,280px 74px,299px 82px,341px 114px,398px 114px,414px 114px,401px 160px,384px 215px,377px 242px,387px 314px,383px 323px,341px 395px,348px 411px,365px 418px,387px 411px,442px 329px,443px 315px,437px 268px,436px 253px,447px 255px,462px 271px,494px 312px,496px 324px,500px 402px,514px 418px,532px 418px);
+}
+
+.button:nth-child(1):hover ~ .head {
+    left: 630px;
+    bottom: 340px;
+}
+.button:nth-child(2):hover ~ .head {
+    left: 630px;
+    bottom: 330px;
+}
+.button:nth-child(3):hover ~ .head {
+    left: 580px;
+    bottom: 350px;
+}
+.button:nth-child(4):hover ~ .head {
+    left: 630px;
+    bottom: 330px;
+}
+
+
